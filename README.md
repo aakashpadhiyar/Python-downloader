@@ -17,7 +17,19 @@ To use the script, simply replace the `down_links` variable with a list of URLs 
 
 pythonCopy code
 
-`urls = down_links  with ThreadPoolExecutor(max_workers=10) as executor:     futures = []     for url, filename in zip(urls, File_name):         futures.append(executor.submit(download, url, filename))      for future in as_completed(futures):         result = future.result()         print(result)`
+```
+urls = down_links
+
+with ThreadPoolExecutor(max_workers=10) as executor:
+    futures = []
+    for url, filename in zip(urls, File_name):
+        futures.append(executor.submit(download, url, filename))
+
+    for future in as_completed(futures):
+        result = future.result()
+        print(result)
+
+```python
 
 How it works
 ------------
