@@ -17,7 +17,7 @@ To use the script, simply replace the `down_links` variable with a list of URLs 
 
 pythonCopy code
 
-```
+```python
 urls = down_links
 
 with ThreadPoolExecutor(max_workers=10) as executor:
@@ -29,7 +29,7 @@ with ThreadPoolExecutor(max_workers=10) as executor:
         result = future.result()
         print(result)
 
-```python
+```
 
 How it works
 ------------
